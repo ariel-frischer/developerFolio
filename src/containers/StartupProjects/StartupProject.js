@@ -5,10 +5,10 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function StartupProject() {
-  function openProjectInNewWindow(url) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
+  // function openProjectInNewWindow(url) {
+  //   var win = window.open(url, "_blank");
+  //   win.focus();
+  // }
   const {isDark} = useContext(StyleContext);
   if (!bigProjects.display) {
     return null;
@@ -27,61 +27,71 @@ export default function StartupProject() {
           >
             {bigProjects.subtitle}
           </p>
-
-          <div className="projects-container">
-            {bigProjects.projects.map((project, i) => {
-              return (
-                <div
-                  key={i}
-                  className={
-                    isDark
-                      ? "dark-mode project-card project-card-dark"
-                      : "project-card project-card-light"
-                  }
-                >
-                  {project.image ? (
-                    <div className="project-image">
-                      <img
-                        src={project.image}
-                        alt={project.projectName}
-                        className="card-image"
-                      ></img>
-                    </div>
-                  ) : null}
-                  <div className="project-detail">
-                    <h5
-                      className={isDark ? "dark-mode card-title" : "card-title"}
-                    >
-                      {project.projectName}
-                    </h5>
+          <div className="startup-projects-main">
+            <div
+              className="startup-project-text"
+              style={{
+                display: "flex",
+                justifyContenty: "center",
+                alignContent: "center"
+              }}
+            >
+              {bigProjects.projects.map(project => {
+                return (
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      margin: 30
+                    }}
+                  >
+                    <h3>{project.name}</h3>
                     <p
+                      style={{textAlign: "center", fontSize: "13px"}}
                       className={
-                        isDark ? "dark-mode card-subtitle" : "card-subtitle"
+                        isDark
+                          ? "dark-mode project-subtitle"
+                          : "subTitle project-subtitle"
                       }
                     >
-                      {project.projectDesc}
+                      {project.description}
                     </p>
-                    {project.footerLink ? (
-                      <div className="project-card-footer">
-                        {project.footerLink.map((link, i) => {
-                          return (
-                            <span
-                              key={i}
-                              className={
-                                isDark ? "dark-mode project-tag" : "project-tag"
-                              }
-                              onClick={() => openProjectInNewWindow(link.url)}
-                            >
-                              {link.name}
-                            </span>
-                          );
-                        })}
-                      </div>
-                    ) : null}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={project.link ? {} : {pointerEvents: "none"}}
+                    >
+                      {project.image ? (
+                        <img
+                          alt="Ariel's Projects"
+                          style={{
+                            borderRadius: "20px",
+                            minHeight: 170,
+                            objectFit: "cover",
+                            boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`
+                          }}
+                          src={project.image}
+                        ></img>
+                      ) : (
+                        <video
+                          autoPlay={true}
+                          style={{
+                            borderRadius: "20px",
+                            maxWidth: 300,
+                            boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`
+                          }}
+                        >
+                          <source src={project.video} type="video/mp4"></source>
+                        </video>
+                      )}
+                    </a>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            {/* <div className="startup-project-image"></div> */}
           </div>
         </div>
       </div>

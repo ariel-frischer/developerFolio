@@ -8,6 +8,7 @@ export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
   );
+
   const FailedLoading = () => null;
   const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState([]);
@@ -36,6 +37,10 @@ export default function Projects() {
     };
     getRepoData();
   }, []);
+
+  if (!openSource.display) {
+    return null;
+  }
 
   function setrepoFunction(array) {
     setrepo(array);

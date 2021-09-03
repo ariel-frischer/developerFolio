@@ -4,6 +4,7 @@
   max-width: 100%;
   height: auto;
   width: 250px;
+  align-self: center;
 }
 .card-title {
   color: $titleColor;
@@ -41,6 +42,8 @@
   height: 250px;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .achievement-cards-div {
   display: grid;
