@@ -3,6 +3,7 @@ import "./StartupProjects.scss";
 import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {useMediaQuery} from "./../../hooks/useMediaQuery";
 
 export default function StartupProject() {
   // function openProjectInNewWindow(url) {
@@ -10,6 +11,10 @@ export default function StartupProject() {
   //   win.focus();
   // }
   const {isDark} = useContext(StyleContext);
+  const isDesktopOrLaptop = useMediaQuery("(min-width: 1224px)");
+  const isBigScreen = useMediaQuery("(min-width: 1824px)");
+  const isTabletOrMobile = useMediaQuery("(max-width: 1224px)");
+
   if (!bigProjects.display) {
     return null;
   }
@@ -32,13 +37,15 @@ export default function StartupProject() {
               className="startup-project-text"
               style={{
                 display: "flex",
-                justifyContenty: "center",
-                alignContent: "center"
+                justifyContent: "center",
+                alignContent: "center",
+                flexWrap: "wrap"
               }}
             >
               {bigProjects.projects.map(project => {
                 return (
                   <div
+                    className="big-project-div-container"
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -68,7 +75,11 @@ export default function StartupProject() {
                           alt="Ariel's Projects"
                           style={{
                             borderRadius: "20px",
-                            minHeight: 170,
+                            // minHeight: 170,
+                            margin: 20,
+                            height: "auto",
+                            maxWidth: "100%",
+                            // minWidth: "200px",
                             objectFit: "cover",
                             boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`
                           }}
@@ -77,9 +88,14 @@ export default function StartupProject() {
                       ) : (
                         <video
                           autoPlay={true}
+                          // className="project-video"
                           style={{
+                            maxWidth: "100%",
+                            margin: 20,
+                            height: "auto",
+                            width: "450px",
                             borderRadius: "20px",
-                            maxWidth: 300,
+                            // maxWidth: 450,
                             boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`
                           }}
                         >
