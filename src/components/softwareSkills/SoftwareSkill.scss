@@ -18,14 +18,41 @@
 .software-skill-inline > i {
   color: $subTitle;
 }
+.software-skill-inline > .path {
+  color: $subTitle;
+  fill: $subTitle;
+}
+
+.ts-icon-path {
+  color: $subTitle;
+  fill: $subTitle;
+  :hover > & {
+    fill: $skillsColor;
+  }
+}
+
+.ts-icon-p {
+  color: $subTitle;
+  fill: $subTitle;
+  :hover > & {
+    fill: $skillsColor;
+  }
+}
 
 .software-skill-inline > i:hover {
   color: $skillsColor;
+}
+.ts-icon-path > :hover {
+  color: $skillsColor;
+  fill: $skillsColor;
 }
 .software-skill-inline > p {
   color: $subTitle;
   font-size: 10px;
 }
 .software-skill-inline > i:hover ~ p {
+  color: $skillsColor;
+}
+.software-skill-inline > svg:hover ~ p {
   color: $skillsColor;
 }

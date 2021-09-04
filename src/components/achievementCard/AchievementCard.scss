@@ -5,6 +5,8 @@
   height: auto;
   width: 250px;
   align-self: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px;
 }
 .card-title {
   color: $titleColor;
