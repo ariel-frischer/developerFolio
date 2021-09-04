@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21029aa118237469a29f4a552b56b70c",
+    "revision": "648690bb5b8b8f029c391b28c2f2af4e",
     "url": "/developerFolio/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/developerFolio/static/css/4.5c57288c.chunk.css"
   },
   {
-    "revision": "cf3d8249fb924edc4a5a",
-    "url": "/developerFolio/static/css/main.551a4355.chunk.css"
+    "revision": "69c43b6a8b9b9364d300",
+    "url": "/developerFolio/static/css/main.7bf31364.chunk.css"
   },
   {
     "revision": "964ea27950092c86b9b1",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/developerFolio/static/js/4.636fde41.chunk.js"
   },
   {
-    "revision": "cf3d8249fb924edc4a5a",
-    "url": "/developerFolio/static/js/main.26452df5.chunk.js"
+    "revision": "69c43b6a8b9b9364d300",
+    "url": "/developerFolio/static/js/main.232500d7.chunk.js"
   },
   {
     "revision": "7a0819e117406ba82d65",
@@ -76,8 +76,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/developerFolio/static/media/manOnTable.52be3144.svg"
   },
   {
-    "revision": "ea1a5eae986d2ab72d74950251a93c33",
-    "url": "/developerFolio/static/media/particle-lab.ea1a5eae.png"
+    "revision": "455f978eb02670556325aa56b5fc0df9",
+    "url": "/developerFolio/static/media/particle-lab.455f978e.png"
   },
   {
     "revision": "4b2938b9f5ea2f1ddbd45dccaff628bc",
